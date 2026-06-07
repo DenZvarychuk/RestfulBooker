@@ -1,11 +1,11 @@
-package org.booker;
+package org.booker.model;
 
 public class Credentials {
 
     private final String username;
     private final String password;
 
-    Credentials(String username, String password){
+    public Credentials(String username, String password){
         this.username = username;
         this.password = password;
     }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+    <Properties>
+        <Property name="LOG_DIR">logs</Property>
+    </Properties>
+
+    <Appenders>
+        <!-- output to console for test process -->
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="%-5p %c: %msg%n"/>
+        </Console>
+
+        <!-- Log to File -->
+        <File name="FILE"
+              fileName="${LOG_DIR}/booker.log"
+              append="false">
+            <PatternLayout pattern="%d %-5p %c: %m%n"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Root level="DEBUG">
+            <AppenderRef ref="FILE"/>
+            <AppenderRef ref="CONSOLE"/>
+        </Root>
+    </Loggers>
+
+</Configuration>
