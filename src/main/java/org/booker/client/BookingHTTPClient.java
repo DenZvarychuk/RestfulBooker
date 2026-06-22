@@ -1,12 +1,13 @@
 package org.booker.client;
 
-import org.booker.model.AuthToken;
-import org.booker.model.Credentials;
+import org.booker.model.*;
+
+import java.util.List;
 
 public interface BookingHTTPClient {
     AuthToken getToken(Credentials credentials);
-    // List<BookId> getBookList();
-    // List<BookId> getBookList(BookingFilter filter);
+    List<BookingId> getBookingList();
+    List<BookingId> getBookingList(BookingFilter filter);
+    BookingResponse getBooking(BookingId id);
     // BookingResponse book(BookingRequest request);
-    // public record BookId(Integer bookId) {}
 }
