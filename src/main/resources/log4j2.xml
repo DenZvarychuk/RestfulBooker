@@ -22,7 +22,7 @@
     <Loggers>
         <Root level="DEBUG">
             <AppenderRef ref="FILE"/>
-            <AppenderRef ref="CONSOLE"/>
+<!--            <AppenderRef ref="CONSOLE"/>-->
         </Root>
     </Loggers>
 
